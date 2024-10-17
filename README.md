@@ -18,7 +18,7 @@ This is a Pinterest-like web application built using Node.js and Express.js for 
 Clone the repository.
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/YashVishnoi47/Pinterest-Clone.git
 ```
 
 Go to the project directory
