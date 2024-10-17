@@ -24,7 +24,7 @@ Clone the repository.
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd ./pinterest-clone
 ```
 
 Install dependencies
