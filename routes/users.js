@@ -1,9 +1,39 @@
-var express = require('express');
-var router = express.Router();
+const mongoose = require('mongoose');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+
+mongoose.connect("mongodb://127.0.0.1:27017/pinterest-Clone")
+
+const userSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    posts: [{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Post'
+    }],
+    dp: {
+        type: String, 
+        default: 'default_dp.jpg'
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    fullname: {
+        type: String,
+        required: true
+    }
+}, {
+    timestamps: true
 });
 
-module.exports = router;
+const User = mongoose.model('User', userSchema);
+ 
+module.exports = User;
