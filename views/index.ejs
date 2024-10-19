@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../stylesheets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/login.css" />
   <title>Document</title>
 </head>
+
 <body>
-  <div class="container">
-    <div class="content">
-      <!--pinterest logo-->
-      <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
-      <p class="header">Register to see more</p>
+  <!-- /* From Uiverse.io by Yaya12085 */ -->
 
-      <form action="/register" method="post">
-        <input name="fullname" type="text" placeholder="Fullname" class="detail" />
-        <input name="username" type="text" placeholder="Username" class="detail" />
-        <input name="email" type="email" placeholder="Email" class="detail" />
-        <input name="password" type="password" placeholder="Password" class="detail" />
-        <input type="submit" class="btn int" value="Register Account">
-      </form>
+  <form action="/register" method="post" class="form">
+    <p class="form-title">Register your account</p>
+    <div class="input-container">
+      <input placeholder="Enter Full Name" name="fullname" type="text" />
+      <span>
+        <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+            stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+      </span>
+    </div>
+    <div class="input-container">
+      <input placeholder="Enter Username" name="username" type="text" />
+      <span>
+        <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+            stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+      </span>
+    </div>
+    <div class="input-container">
+      <input placeholder="Enter Email" name="email" type="email" />
+      <span>
+        <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+            stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+      </span>
+    </div>
+    <div class="input-container">
+      <input name="password" name="password" placeholder="Enter password" type="password" />
 
+      <span>
+        <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+          </path>
+          <path
+            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+            stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+      </span>
+    </div>
+    <input value="Log in" class="submit" type="submit" />
 
-      <a>Forgot your password?</a>
-
-      <!-- <button class="btn int">Log in</button> -->
-      <!-- <p class="or">OR</p> -->
-      <!-- <button class="btn fbk">
-        <i
-          class="fab fa-facebook fa-lg"
-          style="color: white; padding-right: 10px"
-        ></i
-        ><a href="#">Continue with Facebook</a></button
-      ><br />
-      <button class="btn ggl">
-        <i
-          class="fab fa-google"
-          style="color: rgb(11, 241, 22); padding-right: 10px"
-        ></i
-        ><a href="#">Continue with Google</a>
+    <!-- <button class="submit" type="submit">
+        Sign in
       </button> -->
 
-      <footer>
-        <p>
-          By continuing, you agree to Pinterest's
-          <b>Terms of Service, Privacy policy.</b>
-        </p>
-        <hr />
-        <p>Not on Pinterest yet? Sign up</p>
-      </footer>
-    </div>
-  </div>
-  <a href="*" class="upbtn">Sign up</a>
-
+    <p class="signup-link">
+      Allready have an account?
+      <a href="/login">Log in</a>
+    </p>
+  </form>
 </body>
+
 </html>
