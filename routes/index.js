@@ -19,8 +19,13 @@ router.get('/login', function(req, res, next) {
 });
 
 router.get('/profile',isLoggedIn , function(req, res, next) {
-  res.send("Wellcome to Profile")
+  res.render("profile")
 });
+
+router.get('/feed', function(req, res, next) {
+  res.render('feed');
+});
+
 
 router.post('/register',function(req,res,next){
  const userdata = new userModel({
