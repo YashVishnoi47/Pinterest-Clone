@@ -1,5 +1,5 @@
 ##Project Under Progess.
-# pinterest Clone 
+# pinterest Re-designed
 
 This is a Pinterest-like web application built using Node.js and Express.js for the backend, MongoDB with Mongoose for database management, and Passport.js (with Passport-local strategy) for user authentication. The project replicates core features of Pinterest, including user registration, login, posting and saving image pins, and viewing a personalized collection of images.
 
