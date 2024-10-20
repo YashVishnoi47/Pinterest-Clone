@@ -3,40 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest Profile Page</title>
     <link rel="stylesheet" href="/stylesheets/Profile.css">
-    <title>Document</title>
 </head>
 <body>
-    <body>
-        <div id="box">
-          <div id="card">
-            <div id=main>
-              <div id="profile">
-                <div id="circle1" class="circle"></div>
-                <div id="circle2" class="circle"></div>
-                <img src="https://100dayscss.com/codepen/jessica-potter.jpg" width="70" height="70" alt="Jessica Potter">
-              </div>
-              <span id="name" class="bold">@Usename</span>
-              <span id="job" class="thin">Tag Line</span>
-              <button class="button">Follow</button>
-              <button class="button">Account Settings</button>
+    <main class="profile-container">
+        <div class="profile-header">
+            <div class="profile-picture">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture">
             </div>
-            <div id="stats">
-              <div class="statItem">
-                <span class="statCount">384</span>
-                <span class="statTitle">Post</span>
-              </div>
-              <div class="statItem">
-                <span class="statCount">1545</span>
-                <span class="statTitle">Likes</span>
-              </div>
-              <div class="statItem">
-                <span class="statCount">715</span>
-                <span class="statTitle">Followers</span>
-              </div>
+            <div class="profile-info">
+                <h1 class="username">Yash Bishnoi</h1>
+                <p class="user-meta">BlshnoiYash1921 · he/him</p>
+                <p class="following-count">0 following</p>
+                <div class="profile-actions">
+                    <button class="share-btn">Share</button>
+                    <button class="edit-profile-btn">Edit profile</button>
+                </div>
             </div>
-          </div>
         </div>
-      </body>
+
+        <div class="profile-tabs">
+            <button class="tab active">Created</button>
+            <button class="tab">Saved</button>
+        </div>
+
+        <div class="profile-content">
+            <p class="empty-message">Nothing to show... yet! Pins you create will live here.</p>
+            <button class="create-pin-btn">Create Pin</button>
+        </div>
+    </main>
 </body>
 </html>

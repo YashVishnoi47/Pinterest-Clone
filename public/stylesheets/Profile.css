@@ -1,157 +1,168 @@
-body{
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#box{
-    width: 80%;
-    height: 380px;
-    background: linear-gradient(90deg, lightsteelblue, lightslategrey);
-    border-radius: 10px;
-    margin: calc((100vh - 400px)/2) auto;
-    box-shadow: 5px 5px 5px gray;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: -170px;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+  margin: 0;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-info {
+  margin-top: 10px;
+}
+
+.username {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-meta {
+  color: #888;
+  font-size: 14px;
+}
+
+.following-count {
+  font-size: 16px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.profile-actions {
+  margin-top: 15px;
+}
+
+.share-btn, .edit-profile-btn {
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.share-btn:hover, .edit-profile-btn:hover {
+  background-color: #bbb;
+}
+
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.tab.active {
+  border-bottom: 2px solid #000;
+}
+
+.profile-content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.empty-message {
+  color: #888;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.create-pin-btn {
+  background-color: #DD367E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.create-pin-btn:hover {
+  background-color: #c02c68;
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+  .profile-header {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
   }
-  
-  #card{
-    width: 300px;
-    height: 280px;
-    background: white;
-    border-radius: 10px;
-    position: absolute;
-     top: 50px;
-    /* left: 40px; */
-    display: flex;
-    box-shadow: 3px 3px 15px black;
-    font-family: Verdana;
-    overflow: hidden;
+
+  .profile-info {
+      margin-left: 20px;
+      text-align: left;
   }
-  
-  #main{
-    width: 210px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+  .profile-container {
+      padding: 40px;
   }
-  
-  #stats{
-     width: 90px;
-     height: 100%;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
+
+  .share-btn, .edit-profile-btn {
+      margin-left: 10px;
+      margin-right: 10px;
   }
-  
-  #profile{
-    width: 90px;
-    height: 90px;
-    position: relative;
-    cursor: pointer;
+
+  .profile-tabs {
+      justify-content: flex-start;
   }
-  
-  #profile:hover #circle1{
-    transform: rotate(-360deg);
+}
+
+@media (max-width: 599px) {
+  .profile-container {
+      padding: 20px;
   }
-  
-  #profile:hover #circle2{
-    transform: rotate(360deg);
+
+  .tab {
+      font-size: 14px;
   }
-  
-  .circle{
-    position: absolute;
-    display: border-box;
-    border-radius: 50%;
-    border: 1px solid #4F46E5;
-    transition: transform 1500ms;
+
+  .create-pin-btn {
+      padding: 8px 16px;
   }
-  
-  #circle1{
-    width: 82px;
-    height: 82px;
-    top: 4px;
-    left: 4px;
-    border-right-color: white;
+
+  .empty-message {
+      font-size: 14px;
   }
-  
-  #circle2{
-    width: 76px;
-    height: 76px;
-    top: 7px;
-    left: 7px;
-    border-left-color: white;
-  }
-  
-  #main img{
-    top: 10px;
-    left: 10px;
-    position: absolute;
-    border-radius: 50%;
-  }
-  
-  .bold, .statCount{
-    font-size: 15px;
-  }
-  
-  .thin, .statTitle{
-      font-size: 12px;
-  }
-  
-  #name{
-    margin-top: 15px;
-  }
-    
-  #job{
-    margin-bottom: 15px;
-  }
-  
-  .button{
-    width: 120px;
-    height: 30px;
-    border-radius: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: 1px solid #4F46E5;
-    color: #4F46E5;
-    background: white;
-    cursor: pointer;
-    transition: background 600ms, color 600ms;
-    box-shadow: 2px 2px 5px black;
-  }
-  
-  .button:hover{
-    background: #4F46E5 ;
-    color: white;
-  }
-  
-  .button:active{
-    background: midnightblue;
-    color: white;
-    margin-top: 7px;
-    margin-bottom: 3px;
-    box-shadow: none;
-  }
-  
-  .statItem{
-    width: 100%;
-    height: 91px;
-    background: gainsboro;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .statItem:hover{
-    background: #CDCDCD;
-  }
-  
-  
+}
