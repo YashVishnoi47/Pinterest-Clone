@@ -29,11 +29,14 @@
             </svg>
           </span>
         </div>
+
+
+        <% if(error.length > 0) { %>
+          <p class="error"><%= error %></p>
+        <% } %>
+        
             <input value="Log in" class="submit" type="submit">
 
-         <!-- <button class="submit" type="submit">
-        Sign in
-      </button> -->
 
       <p class="signup-link">
         No account?

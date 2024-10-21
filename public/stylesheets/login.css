@@ -92,3 +92,12 @@ body{
   .signup-link a {
     text-decoration: underline;
   }
+
+
+
+  .error{
+    color: red;
+    /* width: 100%;  */
+    text-align: center;
+    text-transform: capitalize;
+  }

@@ -67,9 +67,12 @@ body {
   color: #333;
   border: none;
   border-radius: 20px;
-  padding: 10px 20px;
-  margin: 5px;
+  padding: 10px 15px;
+  margin: 10px;
   cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  top: 5px;
 }
 
 .share-btn:hover, .edit-profile-btn:hover {
